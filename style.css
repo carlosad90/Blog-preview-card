@@ -1,0 +1,125 @@
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray-500: hsl(0, 0%, 42%);
+  --Gray-950: hsl(0, 0%, 7%);
+  --paragraph-size: 16px;
+  --main-font: "Figtree";
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 24px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Yellow);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-family: var(--main-font);
+  color: var(--Gray-950);
+  font-size: 1rem;
+}
+
+.card {
+  max-width: clamp(20.4375rem, 30vw, 24rem);
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  border: 1px solid var(--Gray-950);
+  background-color: var(--White);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+
+  & .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  & .card-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  & .tag {
+    border-radius: 4px;
+    padding: var(--space-xs) var(--space-md);
+    background-color: var(--Yellow);
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    font-weight: 900;
+    line-height: 150%;
+  }
+
+  & .date {
+    line-height: 150%;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  & .title-link {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 1vw, 1.5rem);
+    line-height: 150%;
+    font-weight: 900;
+    transition: color 0.3s;
+  }
+
+  & .title-link:link {
+    color: var(--Gray-950);
+  }
+
+  & .title-link:visited {
+    color: var(--Gray-950);
+  }
+
+  & .title-link:hover {
+    color: var(--Yellow);
+  }
+
+  & .title-link:active {
+    color: var(--Yellow);
+  }
+
+  & .description {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--Gray-500);
+  }
+
+  & .user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    & .image {
+      display: block;
+      max-width: 100%;
+      width: 32px;
+      height: 32px;
+    }
+
+    & .name {
+      font-weight: 900;
+      font-size: 0.875rem;
+      line-height: 150%;
+    }
+  }
+}
+
+.card-image {
+  display: block;
+  max-width: 100%;
+}
