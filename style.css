@@ -51,6 +51,13 @@ body {
   & .card-image-container {
     border-radius: 10px;
     overflow: hidden;
+
+    & .card-image {
+      max-inline-size: 100%;
+      block-size: auto;
+      aspect-ratio: 1.395;
+      object-fit: cover;
+    }
   }
 
   & .tag {
@@ -122,4 +129,14 @@ body {
 .card-image {
   display: block;
   max-width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    & .card-image-container {
+      & .card-image {
+        aspect-ratio: 1.68;
+      }
+    }
+  }
 }
